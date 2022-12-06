@@ -23,10 +23,10 @@ export class ContactForm extends Component {
   handleSubmit = e => {
     const { name, number } = this.state;
     e.preventDefault();
-    console.log(this.state);
     this.props.onSubmit(name, number);
     this.reset();
   };
+
   reset = () => {
     this.setState({
       name: '',
